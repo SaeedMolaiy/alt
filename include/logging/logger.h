@@ -26,4 +26,8 @@ private:
     void log(const char* message, const log_type& log_type);
     bool must_log(const log_type& log_type);
 
+private:
+    const char* get_prefix(const log_type& log_type);
+    const char* get_color(const log_type& log_type);
+
 };
