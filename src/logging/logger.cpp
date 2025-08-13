@@ -22,37 +22,37 @@ void logger::set_logger_level(const log_type& logger_level)
     m_logger_level = logger_level;
 }
 
-void logger::assert(const char* message)
+void logger::assert(const char* message) const
 {
     log(message, log_type::assert);
 }
 
-void logger::debug(const char* message)
+void logger::debug(const char* message) const
 {
     log(message, log_type::debug);
 }
 
-void logger::info(const char* message)
+void logger::info(const char* message) const
 {
     log(message, log_type::info);
 }
 
-void logger::warning(const char* message)
+void logger::warning(const char* message) const
 {
     log(message, log_type::warning);
 }
 
-void logger::error(const char* message)
+void logger::error(const char* message) const
 {
     log(message, log_type::error);
 }
 
-void logger::critical(const char* message)
+void logger::critical(const char* message) const
 {
     log(message, log_type::critical);
 }
 
-void logger::log(const char* message, const log_type& log_type)
+void logger::log(const char* message, const log_type& log_type) const
 {
     if(!must_log(log_type))
         return;
@@ -65,12 +65,12 @@ void logger::log(const char* message, const log_type& log_type)
         << NEW_LINE;
 }
 
-bool logger::must_log(const log_type& log_type)
+bool logger::must_log(const log_type& log_type) const
 {
     return log_type >= m_logger_level;
 }
 
-const char* logger::get_prefix(const log_type& log_type)
+const char* logger::get_prefix(const log_type& log_type) const
 {
     switch (log_type)
     {
@@ -99,7 +99,7 @@ const char* logger::get_prefix(const log_type& log_type)
     return nullptr;
 }
 
-const char* logger::get_color(const log_type& log_type)
+const char* logger::get_color(const log_type& log_type) const
 {
     switch (log_type)
     {

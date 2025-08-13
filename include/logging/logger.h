@@ -15,19 +15,19 @@ public:
     void set_logger_level(const log_type& logger_level);
 
 public:
-    void assert(const char* message);
-    void debug(const char* message);
-    void info(const char* message);
-    void warning(const char* message);
-    void error(const char* message);
-    void critical(const char* message);
+    void assert(const char* message) const ;
+    void debug(const char* message) const ;
+    void info(const char* message) const ;
+    void warning(const char* message) const ;
+    void error(const char* message) const ;
+    void critical(const char* message) const ;
 
 private:
-    void log(const char* message, const log_type& log_type);
-    bool must_log(const log_type& log_type);
+    void log(const char* message, const log_type& log_type) const ;
+    bool must_log(const log_type& log_type) const ;
 
 private:
-    const char* get_prefix(const log_type& log_type);
-    const char* get_color(const log_type& log_type);
+    const char* get_prefix(const log_type& log_type) const ;
+    const char* get_color(const log_type& log_type) const;
 
 };
