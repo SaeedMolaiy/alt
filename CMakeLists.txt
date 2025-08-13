@@ -18,9 +18,9 @@ add_executable(
         src/main.cpp
         src/logging/logger.cpp
         src/core/options/compile_options.cpp
+        src/core/compile_context.cpp
         include/logging/log_type.h
         include/logging/logger.h
         include/core/options/compile_options.h
-        include/memory_macros.h
         include/core/compile_context.h
-        src/core/compile_context.cpp)
+        include/memory_macros.h)
