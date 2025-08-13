@@ -19,5 +19,4 @@ add_executable(
         src/logging/logger.cpp
         include/logging/log_type.h
         include/logging/logger.h
-        include/memory_macros.h
-        include/io/file_reader.h)
+        include/memory_macros.h)
