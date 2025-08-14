@@ -16,9 +16,11 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(
         alt
         src/main.cpp
+        src/io/file.cpp
         src/logging/logger.cpp
         src/core/options/compile_options.cpp
         src/core/compile_context.cpp
+        include/io/file.h
         include/logging/log_type.h
         include/logging/logger.h
         include/core/options/compile_options.h
